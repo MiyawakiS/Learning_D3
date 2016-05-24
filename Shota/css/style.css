@@ -1,0 +1,9 @@
+
+.textStyle{
+  font-weight: bold;
+  border: 1px solid gray;
+}
+
+svg{
+  border: 1px solid rgb(19,232,200);
+}

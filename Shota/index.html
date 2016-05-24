@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+D3.jsを書くにあたり、必要知識取得のための勉強
+-->
+<html>
+    <head>
+        <title>This is my fantasy</title>
+        <link rel="icon" href="./images/title.png" type="image/png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="mainBody">
+          <h1>だって可能性感じたんだ</h1>
+          <p id ="msg">そうだ進め。後悔したくない目の前に僕らの道がある。</p>
+          <button id="add">μ's! Music Start!!</button>
+
+
+          <!-- svg関連のことを学ぶ  -->
+          <div>
+            <h2>SVG関連のお勉強だぜ</h2>
+
+            <!-- Javascriptとの連携 -->
+            <svg width="600" height="300" onload="animation()">
+              <rect width="600" height="300" fill="rgb(5,182,54)" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" />
+            </svg>
+
+            <!-- animateを使う -->
+            <svg width="600" height="300">
+              <rect width="600" height="300" fill="rgb(5,182,54)" />
+              <circle cx="100" cy="100" r="20" fill="white" opacity="0.6" >
+                <animate attributeName="r" from="20" to="80" dur="2s" repeatCount="indefinite" />
+              </circle>
+            </svg>
+
+            <!-- transformを使う -->
+            <svg width="600" height="300">
+              <rect width="600" height="300" fill="red" />
+              <rect width="100" height="100" fill="rgb(182,218,241)" opacity="0.6" transform="translate(100, 100)" />
+            </svg>
+
+
+
+            <svg width="600" height="300" viewBox="0 0 200 100"> <!-- viewBox=実際の座標軸 -->
+              <rect width="50" height="100" fill="red" />
+              <rect width="100" height="50" fill="rgb(182,218,241)" />
+            </svg>
+
+            <svg width="600" height="300">
+              <rect width="400" height="200" style="fill:rgb(14,226,67); stroke:rgb(18,112,6); stroke-width:2;
+              stroke-dasharray:20, 5; " />
+              <text x="100" y="100" font-size="32" fill="white" stroke="black" stroke-width="2" rotate="20">
+                ラブライブ！
+              </text>
+            </svg>
+
+            <!-- グループ化 -->
+          <svg width="600" height="300">
+            <g stroke="black">
+              <rect width="600" height="300" fill="red"/>
+              <rect width="400" height="200" fill="green"/>
+              <rect width="100" height="100" fill="white"/>
+            </g>
+          </svg>
+
+          </div>
+
+        </div>
+        <script type="text/javascript" src="./js/learn/learnDom.js"></script>
+        <script type="text/javascript" src="./js/svg.js"></script>
+    </body>
+</html>
